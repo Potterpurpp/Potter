@@ -1,0 +1,13 @@
+name: Print hello chill chill
+
+on: 
+  push: 
+    branches:
+    - main
+jobs:
+  print-text:
+    runs-on: ubuntu-lastest
+
+    steps:
+    - name: checkout code
+      uses:  

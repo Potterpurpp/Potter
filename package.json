@@ -5,10 +5,10 @@
     "author": "{potter}",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js"
+        "start": "node server.js"
     },
     "dependencies": {
-      "express": "^4.18.2",
-      "node-fetch": "^3.2.10"
+        "express": "^4.18.2",
+        "node-fetch": "^3.2.10"
     }
-  }
+}

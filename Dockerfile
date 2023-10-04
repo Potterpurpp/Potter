@@ -1,8 +1,14 @@
-FROM node:16
-RUN mkdir -p /Users/potterpurpp/Documents/Practice/Gitpractice/Hitest
-WORKDIR /Users/potterpurpp/Documents/Practice/Gitpractice/Hitest
-COPY package.json /Users/potterpurpp/Documents/Practice/Gitpractice/Hitest
+FROM node:18
+# Create app directory
+WORKDIR /usr/src/app
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 RUN npm install
-COPY . /Users/potterpurpp/Documents/Practice/Gitpractice/Hitest
+# If you are building your code for production
+# RUN npm ci --omit=dev
+# Bundle app source
+COPY . .
 EXPOSE 3000
-CMD ["npm","start"]
+CMD [ "node", "server.js" ]
